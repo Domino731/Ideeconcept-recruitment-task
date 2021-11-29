@@ -1,3 +1,4 @@
-body {
-    background-color: rebeccapurple;
-}
+@import "./generic/reset";
+@import "./settings/colors";
+@import "./generic/general";
+@import "./elements/header";
