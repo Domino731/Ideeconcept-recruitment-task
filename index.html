@@ -17,15 +17,34 @@
     />
   </head>
   <body>
-    <header class="header">
-        <div class="container">
-            <nav class='nav'>
 
+    <!-- header -->
+    <header class="header">
+        <div class="container container--header">
+
+            <!-- link to specific section -->
+            <nav class='nav'>
+                 <ul class='row'>
+                    <li class='nav__item'><a href='/' class="header__padding" >Buy</a></li>
+                    <li  class='nav__item''><a href='/' class="header__padding" >Sell</a></li>
+                    <li  class='nav__item'><a href='/' class="header__padding" >About</a></li>
+                 <ul>
             </nav>
-            <a href='/'>Register</a>
-            <a href='/'>Login</a>
+
+            <!-- links to authorization forms -->
+            <a href='/' class='header__link header__padding'>Register</a>
+            <a href='/' class='header__link header__link--login header__padding'>Login</a>
         </div>
+
+        
     </header>
+    <div class=" header__panel">
+        <div class="container">
+            <a href='/' class='panel__link panel__link--home '>Home</a> / <a href='/' class='panel__link panel__link--login'>Login</a>
+        </div>
+    </div>
+        
+
     <script src="dist/app.js"></script>
   </body>
 </html>
