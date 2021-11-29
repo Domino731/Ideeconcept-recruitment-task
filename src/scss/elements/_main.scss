@@ -1,0 +1,26 @@
+.content {
+  padding: 75px 0 164px;
+  &__title {
+    font-size: 38px;
+    font-weight: bold;
+  }
+  &__titleDecoration {
+      position: relative;
+      &::after{
+          position: absolute;
+          left: 0;
+          bottom: 1px;
+          display: block;
+          content: '';
+          width: 73%;
+          border: 3px solid $blue;
+          z-index: -1;
+      }
+  }
+  &__subtitle {
+      display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 0;
+  }
+}
