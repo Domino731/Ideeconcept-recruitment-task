@@ -1,8 +1,48 @@
 .content {
-  padding: 75px 0 164px;
+  padding: 75px 50px 164px 50px;
+
+  @include laptopL {
+    padding: 75px 100px 164px 100px;
+  }
+  @include laptopM {
+    padding: 41px 141px 124px 141px;
+  }
+  @include laptopS {
+    padding: 36px 161px 119px 161px;
+  }
+  @media screen and (max-width: 930px) {
+    padding: 36px 76px 119px 76px;
+  }
+  @include tablet {
+    padding: 81px 54px 119px 54px;
+  }
+  @media screen and (max-width: 555px) {
+    padding: 65px 33px 119px 33px;
+  }
+  @include mobileM {
+    padding: 44px 18px 79px 18px;
+  }
   &__title {
     font-size: 38px;
     font-weight: bold;
+    @include laptopM {
+      font-size: 30px;
+    }
+    @include laptopS {
+      font-size: 27px;
+    }
+    @include tablet {
+      font-size: 37px;
+    }
+    @include mobileL {
+      font-size: 32px;
+    }
+    @include mobileM {
+      font-size: 30px;
+    }
+    @include mobileS {
+      font-size: 29px;
+    }
   }
   &__titleDecoration {
     position: relative;
@@ -15,6 +55,10 @@
       width: 73%;
       border: 3px solid $blue;
       z-index: -1;
+      @include laptopM {
+        border: 2px solid $blue;
+        bottom: 2px;
+      }
     }
   }
   &__subtitle {
@@ -22,6 +66,27 @@
     font-size: 18px;
     font-weight: bold;
     padding: 8px 0;
+    @include laptopM {
+      font-size: 16px;
+      padding: 4px 0;
+    }
+    @include laptopS {
+      font-size: 14px;
+      padding: 3px 0;
+    }
+    @include tablet {
+      font-size: 16px;
+      padding: 4px 0;
+    }
+    @include mobileL {
+      font-size: 15px;
+    }
+    @include mobileM {
+      font-size: 15px;
+    }
+    @include mobileS {
+      font-size: 14px;
+    }
   }
 }
 
@@ -34,23 +99,73 @@
   display: flex;
   position: relative;
 
+  @include laptopM {
+    padding: 16px 12px;
+    margin-top: 17px;
+  }
+  @include laptopS {
+    padding: 10px 8px;
+    margin-top: 12px;
+  }
+  @include tablet {
+    padding: 20px 14px;
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+  @include mobileL {
+    padding: 13px 10px;
+  }
+  @include mobileS {
+    padding: 11px 7px;
+  }
   // form decoration
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     display: block;
     position: absolute;
     right: 61px;
     height: 122%;
     width: 25%;
-    background-color: #046DB2;
+    background-color: #046db2;
     transform: skew(0, -7deg) translate(0%, -50%);
-    top: 50%; 
+    top: 50%;
     z-index: -1;
+    @include laptopM {
+      height: 113%;
+      right: 48px;
+      transform: skew(0, -6deg) translate(0%, -50%);
+    }
+    @media screen and (max-width: 700px) {
+      width: 33%;
+    }
+    @include mobileL {
+      right: 11px;
+    }
   }
   &__content {
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
     width: 66%;
     padding: 22px;
+    @include laptopM {
+      padding: 20px;
+    }
+    @include laptopS {
+      padding: 18px;
+    }
+    @include tablet {
+      padding: 15px;
+    }
+    @media screen and (max-width: 700px) {
+      width: 100%;
+    }
+    @include mobileL {
+      padding: 12px;
+    }
+    @include mobileS {
+      padding: 9px;
+    }
   }
   &__card {
     width: 34%;
@@ -58,13 +173,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    @media screen and (max-width: 700px) {
+      margin-top: 94px;
+      width: 100%;
+      border-top: 2px solid #046db2;
+    }
+    @include mobileL {
+      margin-top: 58px;
+    }
   }
   &__label {
     display: block;
-    font-size:18px;
+    font-size: 18px;
     font-weight: bold;
-   
+    @include laptopM {
+      font-size: 16px;
+    }
+    @include laptopS {
+      font-size: 14px;
+    }
+    @include tablet {
+      font-size: 17px;
+    }
+    @include mobileL {
+      font-size: 15px;
+    }
+    @include mobileS {
+      font-size: 14px;
+    }
   }
   &__input {
     width: 100%;
@@ -75,9 +211,18 @@
     border-radius: 4px;
     border: none;
     box-shadow: 2px 2px #e5e5e5 inset;
-    &:focus {
-      border: 2px solid $black;
-      box-shadow: none;
+    @include laptopM {
+      padding: 8px 4px;
+      font-size: 20px;
+      margin: 14px 0;
+    }
+    @include laptopS {
+      padding: 6px 3px;
+      font-size: 17px;
+      margin: 9px 0;
+    }
+    @include mobileM {
+      font-size: 16px;
     }
   }
 
@@ -92,22 +237,78 @@
     font-size: 18px;
     padding: 17px 0;
     border: none;
-    background-color:$gray_dark;
+    background-color: $gray_dark;
     color: #fff;
     font-weight: bold;
     border-radius: 3px;
+    &--register {
+      @include laptopM {
+        width: 70%;
+      }
+      @include mobileL {
+        width: 100%;
+      }
+    }
+    @include laptopM {
+      font-size: 17px;
+      padding: 14px 0;
+    }
+    @media screen and (max-width: 1198px) {
+      font-size: 16px;
+      padding: 11px 0;
+    }
+    @include laptopS {
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    @include tablet {
+      font-size: 17px;
+    }
+    @include mobileL {
+      font-size: 15px;
+    }
+    @include mobileS {
+      font-size: 14px;
+    }
   }
   &__link {
     font-size: 18px;
     font-weight: 500;
-    color: #5E5E5E;
+    color: #5e5e5e;
     text-decoration: none;
     &--member {
       color: $black;
       font-weight: bold;
-      margin-bottom:18px;
+      margin-bottom: 18px;
+      @include laptopM {
+        margin-bottom: 13px;
+      }
+      @include laptopS {
+        margin-bottom: 7px;
+      }
+      @media screen and (max-width: 700px) {
+        margin-bottom: 7px;
+        margin-top: 7px;
+      }
+    }
+
+    @include laptopM {
+      font-size: 17px;
+    }
+    @media screen and (max-width: 1198px) {
+      font-size: 16px;
+    }
+    @include laptopS {
+      font-size: 14px;
+    }
+    @include tablet {
+      font-size: 17px;
+    }
+    @include mobileL {
+      font-size: 15px;
+    }
+    @include mobileS {
+      font-size: 14px;
     }
   }
-
-
 }

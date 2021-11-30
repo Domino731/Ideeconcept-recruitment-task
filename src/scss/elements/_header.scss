@@ -1,69 +1,140 @@
 .header {
-position: relative;
-font-size: 16px;
-&::before, &::after {
+  position: relative;
+  font-size: 16px;
+
+  @include laptopM {
+    font-size: 14px;
+  }
+  @include laptopS {
+    font-size: 13px;
+  }
+  @include tablet {
+    font-size: 15px;
+  }
+  @include mobileL {
+    font-size: 14px;
+  }
+  @include mobileM {
+    font-size: 13px;
+  }
+  &::before,
+  &::after {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     width: 50%;
     height: 100%;
     z-index: -1;
-}
-&::before{
+  }
+  &::before {
     left: 0;
     top: 0;
-    background-color: #CECDCD;
-}
-&::after{
+    background-color: #cecdcd;
+  }
+  &::after {
     right: 0;
     top: 0;
-    background-color: #9E9D9D;
-}
+    background-color: #9e9d9d;
+  }
 
-&__link {
+  &__link {
     display: inline-block;
     font-size: 1em;
     font-weight: bold;
     color: $black;
     text-decoration: none;
     &--login {
-        background-color:  #5E5E5E;
-        color: #fff;
-        display: block;
+      background-color: #5e5e5e;
+      color: #fff;
+      display: block;
     }
-}
-&__padding{
+  }
+  &__padding {
     padding: 1em 29px;
-}
+    @include laptopM {
+      padding: 1em 23px;
+    }
+    @include laptopS {
+      padding: 1em 19px;
+    }
+    @include tablet {
+      padding: 1em 24px;
+    }
+    @include mobileL {
+      padding: 1em 19px;
+    }
+    @include mobileM {
+        padding: 1em 15px;
+    }
+  }
 
-&__panel {
-    background-color: #F4F4F4;
-}
+  &__panel {
+    background-color: #f4f4f4;
+  }
 }
 .nav {
   width: calc(78% - 8px);
-  background-color:#EBEBEB;
+  background-color: #ebebeb;
   font-weight: bold;
   &__item {
-      display: inline-block;
-      a{
-          text-decoration: none;
-          color: #5E5E5E;
-          display: block;
-          height: 100%;
-      }
+    display: inline-block;
+    a {
+      text-decoration: none;
+      color: #5e5e5e;
+      display: block;
+      height: 100%;
+    }
+  }
+  @include laptopM {
+    width: calc(78% - 18px);
+  }
+  @media screen and (max-width: 1177px) {
+    width: calc(78% - 28px);
+  }
+  @include laptopS {
+    width: calc(78% - 36px);
+  }
+  @media screen and (max-width: 555px) {
+    width: 78%;
   }
 }
 .panel {
-    &__link {
-        padding: 0.5em 0;
-        display: inline-block;
-        font-size: 16px;
-        &--login {
-            color: $gray_dark;
-        }
-        &--home {
-            color: #5A92C8;
-        }
+  &__link {
+    padding: 0.5em 0;
+    display: inline-block;
+    font-size: 16px;
+    &--login {
+      color: $gray_dark;
     }
+    &--home {
+      color: #5a92c8;
+    }
+
+    @include laptopM {
+      font-size: 14px;
+    }
+    @include laptopS {
+      font-size: 13px;
+    }
+    @include tablet {
+      font-size: 15px;
+    }
+    @media screen and (max-width: 555px) {
+      &:first-child {
+        margin-left: 24px;
+      }
+    }
+    @include mobileL {
+      font-size: 14px;
+      &:first-child {
+        margin-left: 19px;
+      }
+    }
+    @include mobileM {
+      font-size: 13px;
+      &:first-child {
+        margin-left: 15px;
+      }
+    }
+  }
 }
