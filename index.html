@@ -48,7 +48,7 @@
         </div>
     </div>
         
-    <!-- main content -->
+    <!-- main content with form -->
     <main class='content container'>
 
       <!-- title -->
@@ -60,16 +60,20 @@
         <!-- form -->
         <form class='form'>
             <div class='form__content'>
+
+              <!-- username required -->
                <label class='form__label'>
                       Username
                       <input type='text' name='username' class='form__input' maxlength='100' required/>
                </label>
                
+                  <!-- email required -->
                <label class='form__label'>
                 E-mail Address
                        <input type='email' name='email' class='form__input' required/>
                 </label>
 
+                   <!-- password required -->
                <label class='form__label'>
                 Password
                        <input type='password' name='password' class='form__input' minlength="7" maxlength='25' required/>
@@ -85,6 +89,8 @@
                  <h2 class='form__link form__link--member'>Not a member?</h2>
                  <button class='form__btn form__btn--register' id='form-btn'>Register today</button>
             </div>
+
+            
         </form>
 
     </main>
