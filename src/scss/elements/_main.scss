@@ -134,8 +134,11 @@
     z-index: -1;
     @include laptopM {
       height: 113%;
-      right: 48px;
+      right: calc(5% + 3px);
       transform: skew(0, -6deg) translate(0%, -50%);
+    }
+    @include tablet  {
+      right: calc(5% + 6px);
     }
     @media screen and (max-width: 700px) {
       width: 33%;

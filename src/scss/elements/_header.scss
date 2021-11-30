@@ -85,18 +85,34 @@
       height: 100%;
     }
   }
+  @include laptopL{
+    width: calc(78% - 29px);
+  }
   @include laptopM {
     width: calc(78% - 18px);
   }
   @media screen and (max-width: 1177px) {
     width: calc(78% - 28px);
   }
+  @media screen and (max-width: 1136px) {
+    width: calc(78% - 32px);
+  }
+  @media screen and (max-width: 1080px) {
+    width: calc(78% - 55px);
+  }
   @include laptopS {
     width: calc(78% - 36px);
   }
-  @media screen and (max-width: 555px) {
+  @media screen and (max-width: 857px) {
+    width: calc(78% - 45px);
+  }
+  @media screen and (max-width: 804px) {
+    width: calc(78% - 58px);
+  }
+  @include tablet {
     width: 78%;
   }
+  
 }
 .panel {
   &__link {
@@ -118,6 +134,11 @@
     }
     @include tablet {
       font-size: 15px;
+    }
+    @include tablet {
+        &:first-child {
+            margin-left: 24px;
+          }
     }
     @media screen and (max-width: 555px) {
       &:first-child {

@@ -21,7 +21,7 @@ body {
     justify-content: flex-end;
   }
   @include laptopL {
-    padding: 0 164px ;
+    padding: 0 100px ;
   }
   @include laptopM {
     padding: 0 141px;
@@ -33,10 +33,7 @@ body {
     padding: 0 78px;
   }
   @include tablet {
-    padding: 0 54px;
-  }
-  @media screen and (max-width: 555px) {
-    padding: 0;
+    padding: 0 ;
   }
 }
 .row {
